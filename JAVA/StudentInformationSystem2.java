@@ -12,7 +12,7 @@ public class StudentInformationSystem2 {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 400);
         frame.setLayout(new BorderLayout());
-
+        
         // Input Panel
         JPanel inputPanel = new JPanel(new FlowLayout());
         inputPanel.setBackground(Color.YELLOW);

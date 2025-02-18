@@ -11,7 +11,7 @@ public class GUI {
         JFrame frame = new JFrame("Student Information System");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 400);
-        frame.setLayout(new BorderLayout());
+        frame.setLayout(new FlowLayout());
 
         // Welcome Label
         JLabel welcomeLabel = new JLabel("Welcome to the new Information System!", JLabel.CENTER);

@@ -17,6 +17,8 @@ public class ActivityAddress {
         // North Panel
         JPanel northPanel = new JPanel(new BorderLayout());
         northPanel.setBackground(Color.DARK_GRAY);
+        northPanel.setPreferredSize(new Dimension(400, 200));
+     
 
         // Welcome Panel
         JPanel welcomePanel = new JPanel();
@@ -26,33 +28,41 @@ public class ActivityAddress {
         welcomeLabel.setForeground(Color.WHITE);
         welcomeLabel.setFont(new Font("Serif", Font.BOLD, 20));
         welcomePanel.add(welcomeLabel);
+        
+       
 
         // Input Panel
-        JPanel inputPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JPanel inputPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         inputPanel.setBackground(Color.GRAY);
         inputPanel.setPreferredSize(new Dimension(400, 40));
 
         JLabel nameLabel = new JLabel("Student Name:");
+        nameLabel.setPreferredSize(new Dimension(120, 20));
         nameLabel.setFont(new Font("Helvetica", Font.BOLD, 14));
-        JTextField nametextField = new JTextField(20);
-
-        JLabel ageLabel = new JLabel("Age:");
-        ageLabel.setFont(new Font("Helvetica", Font.BOLD, 14));
-        JTextField agetextField = new JTextField(10);
+        JTextField nametextField = new JTextField(23);
 
         JLabel addressLabel = new JLabel("Address:");
+        addressLabel.setPreferredSize(new Dimension(120, 20));
         addressLabel.setFont(new Font("Helvetica", Font.BOLD, 14));
-        JTextField addressTextField = new JTextField(10);
+        JTextField addressTextField = new JTextField(23);
+        
+        JLabel ageLabel = new JLabel("Age:");
+        ageLabel.setPreferredSize(new Dimension(120, 20));
+        ageLabel.setFont(new Font("Helvetica", Font.BOLD, 14));
+        JTextField agetextField = new JTextField(23);
 
         JButton button = new JButton("Add Student");
         button.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        button.setPreferredSize(new Dimension (120, 25));
+        
+        
 
         inputPanel.add(nameLabel);
         inputPanel.add(nametextField);
-        inputPanel.add(ageLabel);
-        inputPanel.add(agetextField);
         inputPanel.add(addressLabel);
         inputPanel.add(addressTextField);
+        inputPanel.add(ageLabel);
+        inputPanel.add(agetextField);
         inputPanel.add(button);
 
         // Search Panel
@@ -70,6 +80,7 @@ public class ActivityAddress {
         searchPanel.add(searchField);
         searchPanel.add(searchButton);
 
+
         // Display Area
         JTextArea textArea = new JTextArea(10, 30);
         textArea.setEditable(false);
@@ -77,7 +88,10 @@ public class ActivityAddress {
         textArea.setText("LIST OF STUDENTS:\n\n");
         textArea.setMargin(new Insets(20, 50, 20, 20));
         JScrollPane scrollPane = new JScrollPane(textArea);
-
+        
+        
+        
+        
         // List to Store Student Data
         ArrayList<String> students = new ArrayList<>();
 
